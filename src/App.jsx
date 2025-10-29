@@ -3,7 +3,14 @@ import {useContext,useEffect} from 'react'
 import Routing from './Router.jsx'
 import {DataContext} from './Components/DataProvider/DataProvider'
 import {Type} from './Utility/action.type'
-import {auth} from './Utility/Firebase'
+// import {auth} from './Utility/Firebase'
+// App.js or any component
+import { auth, db } from './Utility/Firebase';
+
+// Example: check current user
+console.log(auth.currentUser);
+
+
 
 
 function App() {
