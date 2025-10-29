@@ -6,13 +6,14 @@ import { getFirestore } from "firebase/firestore";
 // Firebase configuration
 // You can replace these with import.meta.env.* later for Netlify deployment
 const firebaseConfig = {
-  apiKey: "AIzaSyDi07Xbk5UVEzVTUSXpo8F8QYR-n1ZBYsQ",
-  authDomain: "clone-c4ebb.firebaseapp.com",
-  projectId: "clone-c4ebb",
-  storageBucket: "clone-c4ebb.firebasestorage.app",
-  messagingSenderId: "221170163939",
-  appId: "1:221170163939:web:b56cebcd4bf036572f25d6"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
 };
+
 
 // Initialize Firebase only if not already initialized
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
